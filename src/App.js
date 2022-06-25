@@ -5,10 +5,47 @@ import MovieList from './components/MovieList';
 import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox'
 import AddFavorites from './components/AddFavorites'
+import RemoveFavorites from './components/RemoveFavorites';
 
 function App() {
 
   const [ movies,setMovies] = useState([
+    {
+      "Title": "John Wick",
+      "Year": "2014",
+      "imdbID": "tt2911666",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg"
+    },
+    {
+      "Title": "John Wick: Chapter 2",
+      "Year": "2017",
+      "imdbID": "tt4425200",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg"
+    },
+    {
+      "Title": "John Wick: Chapter 3 - Parabellum",
+      "Year": "2019",
+      "imdbID": "tt6146586",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"
+    },
+    {
+      "Title": "John Wick: Chapter 3 - Parabellum: HBO First Look",
+      "Year": "2019",
+      "imdbID": "tt10275370",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BYTE0MTE2ZDAtNDNlOC00OGQwLTkxOTUtNzhlMjA1MWJkZWEyXkEyXkFqcGdeQXVyOTkwMTc4ODQ@._V1_SX300.jpg"
+    },
+    {
+      "Title": "John Wick: Don't F*#% with John Wick",
+      "Year": "2015",
+      "imdbID": "tt5278630",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ2YzgxNDUtMmM1NS00MzI1LWI1NjYtZjUyYjBhZjQ5MDdmXkEyXkFqcGdeQXVyODA1NjQ0OTY@._V1_SX300.jpg"
+    },
+
    { "Title": "Star Wars",
     "Year": "1977",
     "imdbID": "tt0076759",
@@ -99,118 +136,7 @@ function App() {
   "Type": "movie",
   "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
 },
-{
-  "Title": "Avengers: Age of Ultron",
-  "Year": "2015",
-  "imdbID": "tt2395427",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg"
-},
-{
-  "Title": "The Avengers",
-  "Year": "1998",
-  "imdbID": "tt0118661",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYWE1NTdjOWQtYTQ2Ny00Nzc5LWExYzMtNmRlOThmOTE2N2I4XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
-},
-{
-  "Title": "The Avengers: Earth's Mightiest Heroes",
-  "Year": "2010–2012",
-  "imdbID": "tt1626038",
-  "Type": "series",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYzA4ZjVhYzctZmI0NC00ZmIxLWFmYTgtOGIxMDYxODhmMGQ2XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg"
-},
-{
-  "Title": "Ultimate Avengers: The Movie",
-  "Year": "2006",
-  "imdbID": "tt0491703",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMTYyMjk0NTMwMl5BMl5BanBnXkFtZTgwNzY0NjAwNzE@._V1_SX300.jpg"
-},
-{
-  "Title": "Ultimate Avengers II",
-  "Year": "2006",
-  "imdbID": "tt0803093",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BZjI3MTI5ZTYtZmNmNy00OGZmLTlhNWMtNjZiYmYzNDhlOGRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-},
-{
-  "Title": "The Avengers",
-  "Year": "1961–1969",
-  "imdbID": "tt0054518",
-  "Type": "series",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BZWQwZTdjMDUtNTY1YS00MDI0LWFkNjYtZDA4MDdmZjdlMDRlXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
-},
-{
-  "Title": "Avengers Assemble",
-  "Year": "2012–2019",
-  "imdbID": "tt2455546",
-  "Type": "series",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMTY0NTUyMDQwOV5BMl5BanBnXkFtZTgwNjAwMTA0MDE@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick",
-  "Year": "2014",
-  "imdbID": "tt2911666",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: Chapter 2",
-  "Year": "2017",
-  "imdbID": "tt4425200",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMjE2NDkxNTY2M15BMl5BanBnXkFtZTgwMDc2NzE0MTI@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: Chapter 3 - Parabellum",
-  "Year": "2019",
-  "imdbID": "tt6146586",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: Chapter 3 - Parabellum: HBO First Look",
-  "Year": "2019",
-  "imdbID": "tt10275370",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYTE0MTE2ZDAtNDNlOC00OGQwLTkxOTUtNzhlMjA1MWJkZWEyXkEyXkFqcGdeQXVyOTkwMTc4ODQ@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick Chapter 2: Wick-vizzed",
-  "Year": "2017",
-  "imdbID": "tt7161870",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BM2I0YWM3Y2EtYzU1YS00MWE1LTg0YjUtNWQ2YTBjZWQ5Mzc1XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: Don't F*#% with John Wick",
-  "Year": "2015",
-  "imdbID": "tt5278630",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ2YzgxNDUtMmM1NS00MzI1LWI1NjYtZjUyYjBhZjQ5MDdmXkEyXkFqcGdeQXVyODA1NjQ0OTY@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: Kill Count",
-  "Year": "2017",
-  "imdbID": "tt7161942",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMjcyM2UzMGQtYzkzYy00MGQ3LWE0MTAtNjIzNzk5MTBhNGQ3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: The Assassin's Code",
-  "Year": "2015",
-  "imdbID": "tt5278698",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BZmQyNDM5OWEtMTliMS00MDIzLWJlZDAtZDYwNTg2YzJkNzFlXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
-},
-{
-  "Title": "John Wick: Car Fu Ride-Along",
-  "Year": "2017",
-  "imdbID": "tt7161902",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYzllZGEwODUtZDE1ZS00ODA4LTljNTItZjRiMzI2NGNhMjg3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
-},
+
 {
   "Title": "Retro Wick: Exploring the Unexpected Success of 'John Wick'",
   "Year": "2017",
@@ -295,27 +221,7 @@ function App() {
   "Type": "movie",
   "Poster": "https://m.media-amazon.com/images/M/MV5BNzM5OTAxYmQtODRkZC00ZGZlLTlhNzYtNzFiODVjMTY4MWU2XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
 },
-{
-  "Title": "Max Payne",
-  "Year": "2001",
-  "imdbID": "tt0291337",
-  "Type": "game",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BY2Q3YTI0OGUtZmFlNi00ZTEzLTkzYTMtNWFhMWJhODNlODQ1XkEyXkFqcGdeQXVyNzU3Nzk4MDQ@._V1_SX300.jpg"
-},
-{
-  "Title": "Max Payne 2: The Fall of Max Payne",
-  "Year": "2003",
-  "imdbID": "tt0366758",
-  "Type": "game",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYTFhNWRmZDgtZDUzZC00NDVmLWE3NzgtMTdkMDcxMDBmMTdmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-},
-{
-  "Title": "Max Payne 3",
-  "Year": "2012",
-  "imdbID": "tt1407064",
-  "Type": "game",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxMjY1OTAyOF5BMl5BanBnXkFtZTcwNTMxMjU2Ng@@._V1_SX300.jpg"
-},
+
 {
   "Title": "Max Payne: Hero",
   "Year": "2003",
@@ -330,34 +236,7 @@ function App() {
   "Type": "movie",
   "Poster": "https://m.media-amazon.com/images/M/MV5BMGEyYWQ2YmUtZDY3Yi00ODBmLWE3YTAtYjI2ODgyZGMzODVjXkEyXkFqcGdeQXVyNDg0MTgzMzk@._V1_SX300.jpg"
 },
-{
-  "Title": "Max Payne: Valhalla",
-  "Year": "2012",
-  "imdbID": "tt2150820",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BNWY1NDZmZTAtMDRkMS00MzJiLWE5ZDktZjgxN2Y5M2Q3ZjAxXkEyXkFqcGdeQXVyMzYzNzc1NjY@._V1_SX300.jpg"
-},
-{
-  "Title": "Max Payne: Movie Special",
-  "Year": "2008",
-  "imdbID": "tt1323600",
-  "Type": "movie",
-  "Poster": "N/A"
-},
-{
-  "Title": "Mad Max Payne",
-  "Year": "2015",
-  "imdbID": "tt5008002",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYjI1MTUxYjktZjI4Yi00MzExLTkyOWQtMzZmYjY5OTZkNjA4XkEyXkFqcGdeQXVyMzExODcwMTk@._V1_SX300.jpg"
-},
-{
-  "Title": "Max Payne: Days of Revenge",
-  "Year": "2009",
-  "imdbID": "tt1964911",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BOTQ2NjQyNDctNTZlNi00ZjU0LWExNTMtZjNlODEwYjM3NDlhXkEyXkFqcGdeQXVyMjQzNjg5MjQ@._V1_SX300.jpg"
-},
+
 {
   "Title": "The Fast and the Furious",
   "Year": "2001",
@@ -386,13 +265,7 @@ function App() {
   "Type": "movie",
   "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ2NTMxODEyNV5BMl5BanBnXkFtZTcwMDgxMjA0MQ@@._V1_SX300.jpg"
 },
-{
-  "Title": "Fast and Furious 6: The Game",
-  "Year": "2013",
-  "imdbID": "tt4106374",
-  "Type": "game",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BNGFiNjYzOTQtMzAyYS00OTUwLWIxMGUtZGQ5NjI2YjgzMGJmXkEyXkFqcGdeQXVyNzg5OTk2OA@@._V1_SX300.jpg"
-},
+
 {
   "Title": "Tasmanian Devil: The Fast and Furious Life of Errol Flynn",
   "Year": "2007",
@@ -400,34 +273,8 @@ function App() {
   "Type": "movie",
   "Poster": "https://m.media-amazon.com/images/M/MV5BZjFjYTQxNWUtNTQ5Yy00ZjA3LTllMTYtM2UxYjM3MGNkM2NhXkEyXkFqcGdeQXVyNzQzNTcwMTU@._V1_SX300.jpg"
 },
-{
-  "Title": "The Fast and the Furious",
-  "Year": "2006",
-  "imdbID": "tt2353948",
-  "Type": "game",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BYWIyZTE1YjctYzRlNy00MTllLWEzZDUtMzMyMzgyODc2Mjg2XkEyXkFqcGdeQXVyNjc3NTE3NTM@._V1_SX300.jpg"
-},
-{
-  "Title": "Fast and the Furious: Tokyo Drift Peek Performance",
-  "Year": "2006",
-  "imdbID": "tt0843849",
-  "Type": "movie",
-  "Poster": "N/A"
-},
-{
-  "Title": "The Fast and the Furious: Editing for the MPAA",
-  "Year": "2002",
-  "imdbID": "tt0781022",
-  "Type": "movie",
-  "Poster": "N/A"
-},
-{
-  "Title": "The Fast and the Furious: Visual Effects Montage",
-  "Year": "2002",
-  "imdbID": "tt0781023",
-  "Type": "movie",
-  "Poster": "N/A"
-},
+
+
   ]);
   const [searchValue,setSearchValue] = useState('');
   const [ favorites,setFavorites] = useState([]);
@@ -447,15 +294,29 @@ function App() {
     getMovieRequest(searchValue);
   },   [searchValue]);
 
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem("react-movie-app-favorites", JSON.stringify(items) );
+  }
+
   const AddFavoriteMovie = (movie) => {
-    const newFavoriteList = [...AddFavorites, movie];
+    const newFavoriteList = [...favorites, movie];
     setFavorites(newFavoriteList);
+    saveToLocalStorage(newFavoriteList);
   }
   
+  const removeFavoriteMovie = (movie) => {
+    const newFavoriteList = favorites.filter(
+      (favorite) => favorite.imdbID !== movie.imdbID
+      );
+
+      setFavorites(newFavoriteList);
+      saveToLocalStorage(newFavoriteList);
+    
+  }
 
   return (
     <div className="container-fluid movie-app">
-        <div className="row d-flex align-items-center mt-4 mb-4 ">
+        <div className="row d-flex align-items-center mt-8 mb-4 ">
           <MovieListHeading heading="Movies"/>
           <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
         </div>
@@ -475,6 +336,8 @@ function App() {
         <div className="row">
           <MovieList
           movies={favorites}
+          handleFavoriteClick={removeFavoriteMovie}
+          favoriteComponent={RemoveFavorites}
           />
         </div>
 
